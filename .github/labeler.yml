@@ -1,0 +1,6 @@
+enhancement: 'feat'
+bug: 'fix'
+documentation: 'docs'
+workflow: 'workflow|workflows'
+refactor: 'refactor'
+chore: 'chore'
