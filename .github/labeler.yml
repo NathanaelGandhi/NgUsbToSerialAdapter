@@ -1,5 +1,5 @@
-feat: 'feat'
-fix: 'fix'
+enhancement: 'feat'
+bug: 'fix'
 documentation: 'docs'
 workflow: 'workflow|workflows'
 refactor: 'refactor'
