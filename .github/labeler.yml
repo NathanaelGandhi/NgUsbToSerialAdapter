@@ -1,6 +1,6 @@
 feat: 'feat'
 fix: 'fix'
-docs: 'docs'
+documentation: 'docs'
 workflow: 'workflow|workflows'
 refactor: 'refactor'
 chore: 'chore'
