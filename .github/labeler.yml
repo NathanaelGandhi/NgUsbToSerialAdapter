@@ -1,0 +1,6 @@
+feat: 'feat'
+fix: 'fix'
+docs: 'docs'
+workflow: 'workflow|workflows'
+refactor: 'refactor'
+chore: 'chore'
