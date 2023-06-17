@@ -1,0 +1,10 @@
+# Nathanael Gandhi | github.com/NathanaelGandhi
+
+name: 'Clang Format Check'
+on:
+  push:
+  pull_request:
+
+jobs:
+  clang-format-check:
+    uses: NathanaelGandhi/reusable-workflows/.github/workflows/clang-format-check-reusable.yaml@main
