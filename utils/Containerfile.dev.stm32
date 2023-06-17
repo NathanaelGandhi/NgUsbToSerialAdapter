@@ -1,0 +1,44 @@
+################################################################################
+# Title:  Development Container for STM32 projects
+# Author: Nathanael Gandhi | gist.github.com/NathanaelGandhi
+# Notes:  Container for all project dependencies. Intended to be run using
+#         distrobox. Can be built with either Docker or Podman. 
+################################################################################
+# Base Image
+FROM ubuntu:22.04
+################################################################################
+# Vars
+ENV PROJECT_NAME='dev-stm32'
+ENV USE_CACHED_APT_PACKAGES='true'
+################################################################################
+# Update apt
+RUN apt update
+
+# Use cached packages if available
+# ON-HOST: sudo apt install apt-cacher-ng
+RUN if [ "$USE_CACHED_APT_PACKAGES" = "true" ]; then \
+        echo "Using cached apt packages if available"; \
+        apt install auto-apt-proxy -y && auto-apt-proxy; \
+     else \
+        echo "Not using cached apt packages"; \
+    fi
+
+# Install user tools
+RUN apt install -y git nano clang-format file tree
+
+# Install build tools
+RUN apt install -y make gcc-arm-none-eabi binutils-arm-none-eabi stlink-tools
+################################################################################
+# Copy libraries
+WORKDIR /opt/${PROJECT_NAME}/libs
+COPY ../libs /opt/${PROJECT_NAME}/libs
+################################################################################
+# Install libraries
+## libopencm3 - Handled in app Makefile
+# WORKDIR /opt/${PROJECT_NAME}/libs/libopencm3
+# RUN make
+################################################################################
+# Set default entry point
+WORKDIR /opt/${PROJECT_NAME}
+ENTRYPOINT [ "/bin/bash" ]
+################################################################################
