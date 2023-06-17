@@ -17,5 +17,5 @@ jobs:
   call-reusable:
     uses: NathanaelGandhi/reusable-workflows/.github/workflows/labeler-reusable.yaml@main
     with:
-      config-path: .github/labeler.yml
+      config-path: NathanaelGandhi/reusable-workflows/.github/labeler.yml@main
     secrets: inherit
