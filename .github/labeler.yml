@@ -1,7 +1,7 @@
 enhancement: 'feat'
 bug: 'fix'
 documentation: 'docs'
-workflow: 'workflow|workflows'
+ci: 'workflow|workflows|ci'
 refactor: 'refactor'
 chore: 'chore'
 dependencies: 'deps|dep'
