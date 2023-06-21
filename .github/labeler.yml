@@ -1,7 +1,0 @@
-enhancement: 'feat'
-bug: 'fix'
-documentation: 'docs'
-ci: 'workflow|workflows|ci'
-refactor: 'refactor'
-chore: 'chore'
-dependencies: 'deps|dep'
