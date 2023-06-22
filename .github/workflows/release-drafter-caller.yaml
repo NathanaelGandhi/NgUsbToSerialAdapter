@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   call-reusable:
-    uses: NathanaelGandhi/release-drafter-reusable-workflow/.github/workflows/release-drafter-reusable.yaml@0.1.6
+    uses: NathanaelGandhi/release-drafter-reusable-workflow/.github/workflows/release-drafter-reusable.yaml@v0.1.6
     with:
       # specify config name to use, relative to .github/.
       config-path: release-drafter.yml
