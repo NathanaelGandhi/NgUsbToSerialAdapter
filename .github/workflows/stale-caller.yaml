@@ -14,6 +14,6 @@ permissions:
 
 jobs:
   call-reusable:
-    uses: NathanaelGandhi/reusable-workflows/.github/workflows/stale-reusable.yaml@main
+    uses: NathanaelGandhi/reusable-workflows/.github/workflows/stale-reusable.yaml@0.1.5
     secrets: inherit
 
