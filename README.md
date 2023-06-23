@@ -29,8 +29,12 @@ make
 ## Firmware (App)
 
 |-- app/
-    |-- src/
-        |-- main.c
+|-- |-- src/
+|-- |-- |-- main.c
+
+### Functionality
+
+- none
 
 ## Libraries
 
