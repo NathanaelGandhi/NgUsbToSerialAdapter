@@ -21,21 +21,23 @@ cd app
 make
 ```
 
-## Supported Processor
+## Microcontroller Target
 
-- Cortex-M4
-- Specifically targeting STM32L496 on a NUCLEO-L496ZG development board
+- [STM32L496](https://www.st.com/en/microcontrollers-microprocessors/stm32l4x6.html) on a [NUCLEO-L496ZG](https://www.st.com/en/evaluation-tools/nucleo-l496zg.html) development board
+  - Arm® Cortex®-M4 core with DSP and floating-point unit (FPU) at 80 MHz.
 
 ## Firmware (App)
 
-|-- app/
-|-- |-- src/
-|-- |-- |-- main.c
+[app/src/main.c](app/src/main.c)
 
 ### Functionality
 
-- none
+- none (successfully make empty project)
 
 ## Libraries
 
-- libopencm3
+- [libopencm3](libs/libopencm3/)
+
+## Utilities
+
+- [Development Containerfile](utils/Containerfile.dev.stm32)
