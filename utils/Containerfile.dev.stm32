@@ -1,8 +1,13 @@
 ################################################################################
 # Title:  Development Container for STM32 projects
 # Author: Nathanael Gandhi | gist.github.com/NathanaelGandhi
-# Notes:  Container for all project dependencies. Intended to be run using
-#         distrobox. Can be built with either Docker or Podman. 
+# Notes:  Container for all project dependencies. Build with either Docker or 
+#         Podman. Intended to be run using Distrobox.
+################################################################################
+# Build Instructions:  
+#   Image:  podman build -t dev-stm32-img -f ./utils/Containerfile.dev.stm32 .
+#   Cont:   distrobox create dev-stm32 -i dev-stm32-img
+#   Run:    distrobox enter dev-stm32      
 ################################################################################
 # Base Image
 FROM ubuntu:22.04
