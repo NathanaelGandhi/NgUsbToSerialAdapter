@@ -17,7 +17,7 @@ BINARY = main
 ###############################################################################
 # Basic Device Setup
 
-LIBNAME			= opencm3_stm32f4
+LIBNAME			= opencm3_stm32l4
 DEFS				+= -DSTM32L4
 FP_FLAGS		?= -mfloat-abi=hard -mfpu=fpv4-sp-d16
 ARCH_FLAGS	= -mthumb -mcpu=cortex-m4 $(FP_FLAGS)
