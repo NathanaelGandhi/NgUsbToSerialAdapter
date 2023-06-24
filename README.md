@@ -1,4 +1,11 @@
-# NgUsbToSerialAdapter
+# STM32L4
+
+Project goals are to demonstrate and create reusable code for using:
+
+- Integrated USB
+- SD interface (4 bits from the SSMMC peripheral on the STM32)
+- SPI camera
+- QuadSPI interface
 
 ## Status
 
@@ -10,8 +17,8 @@
 
 ```shell
 # Clone the repo
-git clone git@github.com:NathanaelGandhi/NgUsbToSerialAdapter.git
-cd NgUsbToSerialAdapter
+git clone git@github.com:NathanaelGandhi/STM32L4.git
+cd STM32L4
 
 # Initialise the submodules (libopencm3)
 git submodule update --init
