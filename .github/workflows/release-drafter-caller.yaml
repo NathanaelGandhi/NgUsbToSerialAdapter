@@ -1,4 +1,5 @@
 name: 'Release Drafter Caller'
+
 on:
   push:
     # branches to consider in the event; optional, defaults to all
@@ -7,9 +8,6 @@ on:
   # pull_request event is required only for autolabeler
   pull_request:
     # Only following types (opened, reopened, synchronize) are handled by the action, but one can default to all as well
-  # pull_request_target event is required for autolabeler to support PRs from forks
-  # pull_request_target:
-  #   types: [opened, reopened, synchronize]
 
 permissions:
   contents: write
@@ -17,7 +15,7 @@ permissions:
 
 jobs:
   call-reusable:
-    uses: NathanaelGandhi/release-drafter-reusable-workflow/.github/workflows/release-drafter-reusable.yaml@v0.1.6
+    uses: NathanaelGandhi/release-drafter-reusable-workflow/.github/workflows/release-drafter-reusable.yaml@v0.1.0
     with:
       # specify config name to use, relative to .github/.
       config-path: release-drafter.yml
