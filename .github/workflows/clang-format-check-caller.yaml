@@ -7,6 +7,6 @@ on:
 
 jobs:
   clang-format-check:
-    uses: NathanaelGandhi/clang-format-check-reusable-workflow/.github/workflows/clang-format-check-reusable.yaml@v0.1.0
+    uses: NathanaelGandhi/clang-format-check-reusable-workflow/.github/workflows/clang-format-check-reusable.yaml@v0.1.1
     secrets:
       caller_token: ${{ secrets.GITHUB_TOKEN }}
