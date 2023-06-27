@@ -2,12 +2,15 @@
 # Title:  Development Container for STM32 projects
 # Author: Nathanael Gandhi | gist.github.com/NathanaelGandhi
 # Notes:  Container for all project dependencies. Build with either Docker or 
-#         Podman. Intended to be run using Distrobox.
+#         Podman. Intended to be run using Distrobox or VSCode Dev Container.
 ################################################################################
-# Build Instructions:  
+# Build Instructions Podman/Distrobox:  
 #   Image:  podman build -t dev-stm32-img -f ./utils/Containerfile.dev.stm32 .
 #   Cont:   distrobox create dev-stm32 -i dev-stm32-img
 #   Run:    distrobox enter dev-stm32      
+################################################################################
+# Build Instructions Docker/VSCode Dev Container:  
+#   VSCode:    Reopen folder in Container
 ################################################################################
 # Base Image
 FROM ubuntu:22.04
@@ -35,8 +38,8 @@ RUN apt install -y git nano clang-format file tree
 RUN apt install -y make gcc-arm-none-eabi binutils-arm-none-eabi stlink-tools
 ################################################################################
 # Copy libraries
-WORKDIR /opt/${PROJECT_NAME}/libs
-COPY ../libs /opt/${PROJECT_NAME}/libs
+# WORKDIR /opt/${PROJECT_NAME}/libs
+# COPY ../libs /opt/${PROJECT_NAME}/libs
 ################################################################################
 # Install libraries
 ## libopencm3 - Handled in app Makefile
@@ -44,6 +47,6 @@ COPY ../libs /opt/${PROJECT_NAME}/libs
 # RUN make
 ################################################################################
 # Set default entry point
-WORKDIR /opt/${PROJECT_NAME}
+# WORKDIR /opt/${PROJECT_NAME}
 ENTRYPOINT [ "/bin/bash" ]
 ################################################################################
