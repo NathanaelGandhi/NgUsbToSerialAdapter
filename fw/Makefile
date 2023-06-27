@@ -6,13 +6,12 @@ NULL		:= 2>/dev/null
 endif
 
 SRC_DIR        = src
-INC_DIR        = include
-BIN_DIR		   = bin
+INC_DIR        = inc
 OPENCM3_DIR    = ../libs/libopencm3
-# SHARED_SRC_DIR = ../shared/src
-# SHARED_INC_DIR = ../shared/inc
+SHARED_SRC_DIR = $(SRC_DIR)/core
+SHARED_INC_DIR = $(INC_DIR)/core
 
-BINARY = main
+BINARY = firmware
 
 ###############################################################################
 # Basic Device Setup
@@ -61,9 +60,10 @@ CSTD		?= -std=c99
 OBJS		+= $(SRC_DIR)/$(BINARY).o
 # OBJS		+= $(SRC_DIR)/bootloader.o
 # OBJS		+= $(SRC_DIR)/timer.o
-# OBJS		+= $(SHARED_SRC_DIR)/core/system.o
-# OBJS		+= $(SHARED_SRC_DIR)/core/uart.o
-# OBJS		+= $(SHARED_SRC_DIR)/core/ring-buffer.o
+OBJS		+= $(SHARED_SRC_DIR)/fw_rcc.o
+# OBJS		+= $(SHARED_SRC_DIR)/system.o
+# OBJS		+= $(SHARED_SRC_DIR)/uart.o
+# OBJS		+= $(SHARED_SRC_DIR)/ring-buffer.o
 
 ###############################################################################
 # C flags
@@ -116,15 +116,15 @@ LDLIBS		+= -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
 
 all: elf bin
 
-elf: $(BIN_DIR)/$(BINARY).elf
-bin: $(BIN_DIR)/$(BINARY).bin
-hex: $(BIN_DIR)/$(BINARY).hex
-srec: $(BIN_DIR)/$(BINARY).srec
-list: $(BIN_DIR)/$(BINARY).list
-GENERATED_BINARIES=$(BIN_DIR)/$(BINARY).elf $(BIN_DIR)/$(BINARY).bin $(BIN_DIR)/$(BINARY).hex $(BIN_DIR)/$(BINARY).srec $(BIN_DIR)/$(BINARY).list $(BIN_DIR)/$(BINARY).map
+elf: $(BINARY).elf
+bin: $(BINARY).bin
+hex: $(BINARY).hex
+srec: $(BINARY).srec
+list: $(BINARY).list
+GENERATED_BINARIES=$(BINARY).elf $(BINARY).bin $(BINARY).hex $(BINARY).srec $(BINARY).list $(BINARY).map
 
-images: $(BIN_DIR)/$(BINARY).images
-flash: $(BIN_DIR)/$(BINARY).flash
+images: $(BINARY).images
+flash: $(BINARY).flash
 
 $(OPENCM3_DIR)/lib/lib$(LIBNAME).a:
 ifeq (,$(wildcard $@))
