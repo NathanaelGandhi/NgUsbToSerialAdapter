@@ -17,7 +17,9 @@
 				"ms-vscode.cpptools-themes",
 				"xaver.clang-format",
 				"streetsidesoftware.code-spell-checker",
-				"marus25.cortex-debug"
+				"marus25.cortex-debug",
+				"ms-azuretools.vscode-docker",
+				"cschlosser.doxdocgen"
 	]}},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
