@@ -33,6 +33,11 @@ make
 - [STM32L496](https://www.st.com/en/microcontrollers-microprocessors/stm32l4x6.html) on a [NUCLEO-L496ZG](https://www.st.com/en/evaluation-tools/nucleo-l496zg.html) development board
   - Arm® Cortex®-M4 core with DSP and floating-point unit (FPU) at 80 MHz.
 
+## Project Blink (STM32CubeIDE)
+
+This is a simple blink project created using STM32CubeIDE. User LEDs 2 & 3 are toggled each second, 0.5 seconds out of phase.
+[project_blink/Core/Src/main.c](project_blink/Core/Src/main.c)
+
 ## Firmware (App)
 
 [app/src/main.c](app/src/main.c)
