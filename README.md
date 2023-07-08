@@ -1,6 +1,6 @@
 # STM32L4
 
-Project goals are to demonstrate and create reusable code for using:
+Goals are to demonstrate and create reusable code for using:
 
 - Integrated USB
 - SD interface (4 bits from the SSMMC peripheral on the STM32)
@@ -17,11 +17,8 @@ Project goals are to demonstrate and create reusable code for using:
 
 ```shell
 # Clone the repo
-git clone git@github.com:NathanaelGandhi/STM32L4.git
+git clone --recurse-submodules git@github.com:NathanaelGandhi/STM32L4.git
 cd STM32L4
-
-# Initialise the submodules (libopencm3)
-git submodule update --init
 
 # Build the main application firmware
 cd app
@@ -38,13 +35,9 @@ make
 This is a simple blink project created using STM32CubeIDE. User LEDs 2 & 3 are toggled each second, 0.5 seconds out of phase.
 [project_blink/Core/Src/main.c](project_blink/Core/Src/main.c)
 
-## Firmware (App)
+## App (vscode)
 
 [app/src/main.c](app/src/main.c)
-
-### Functionality
-
-- none (successfully make empty project)
 
 ## Libraries
 
