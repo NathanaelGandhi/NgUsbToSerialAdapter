@@ -48,6 +48,6 @@ RUN apt-get install -y wget zsh fonts-powerline && \
 CMD [ "zsh" ]
 ################################################################################
 # Install project tools
-RUN apt install -y make clang-format doxygen graphviz gcc-arm-linux-gnueabi \
-                   binutils-arm-linux-gnueabi stlink-tools
+RUN apt install -y make clang-format doxygen graphviz gcc-arm-none-eabi \
+                   binutils-arm-none-eabi stlink-tools
 ################################################################################
