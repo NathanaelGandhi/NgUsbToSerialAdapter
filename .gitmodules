@@ -1,0 +1,3 @@
+[submodule "stm32l496zg-repo-setup"]
+	path = stm32l496zg-repo-setup
+	url = git@github.com:NathanaelGandhi/stm32l496zg-repo-setup.git
