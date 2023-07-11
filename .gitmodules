@@ -1,3 +1,6 @@
 [submodule "stm32l496zg-repo-setup"]
 	path = stm32l496zg-repo-setup
 	url = git@github.com:NathanaelGandhi/stm32l496zg-repo-setup.git
+[submodule "stm32l496zg-blink"]
+	path = stm32l496zg-blink
+	url = git@github.com:NathanaelGandhi/stm32l496zg-blink.git
