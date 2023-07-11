@@ -1,48 +1,15 @@
-# STM32L4
+# STM32L4xx
 
-Goals are to demonstrate and create reusable code for using:
+[![Auto Assign PR Caller](https://github.com/NathanaelGandhi/STM32L4xx/actions/workflows/auto-assign-pr-caller.yaml/badge.svg)](https://github.com/NathanaelGandhi/STM32L4xx/actions/workflows/auto-assign-pr-caller.yaml)
+[![Release Drafter Caller](https://github.com/NathanaelGandhi/STM32L4xx/actions/workflows/release-drafter-caller.yaml/badge.svg)](https://github.com/NathanaelGandhi/STM32L4xx/actions/workflows/release-drafter-caller.yaml)
+[![Label stale issues and PRs](https://github.com/NathanaelGandhi/STM32L4xx/actions/workflows/stale-caller.yaml/badge.svg)](https://github.com/NathanaelGandhi/STM32L4xx/actions/workflows/stale-caller.yaml)
 
-- Integrated USB
-- SD interface (4 bits from the SSMMC peripheral on the STM32)
-- SPI camera
-- QuadSPI interface
+## Purpose
 
-## Status
+This repo is to track STM32L4xx project repos of interest as submodules.
 
-[![Clang Format Check](https://github.com/NathanaelGandhi/NgUsbToSerialAdapter/actions/workflows/clang-format-check-caller.yaml/badge.svg)](https://github.com/NathanaelGandhi/NgUsbToSerialAdapter/actions/workflows/clang-format-check-caller.yaml)
-[![Release Drafter Caller](https://github.com/NathanaelGandhi/NgUsbToSerialAdapter/actions/workflows/release-drafter-caller.yaml/badge.svg)](https://github.com/NathanaelGandhi/NgUsbToSerialAdapter/actions/workflows/release-drafter-caller.yaml)
-[![Label stale issues and PRs](https://github.com/NathanaelGandhi/NgUsbToSerialAdapter/actions/workflows/stale-caller.yaml/badge.svg)](https://github.com/NathanaelGandhi/NgUsbToSerialAdapter/actions/workflows/stale-caller.yaml)
+## Project Starters
 
-## Repo Setup
+These repos are targeted at setting up STM32L4xx projects.
 
-```shell
-# Clone the repo
-git clone --recurse-submodules git@github.com:NathanaelGandhi/STM32L4.git
-cd STM32L4
-
-# Build the main application firmware
-cd app
-make
-```
-
-## Microcontroller Target
-
-- [STM32L496](https://www.st.com/en/microcontrollers-microprocessors/stm32l4x6.html) on a [NUCLEO-L496ZG](https://www.st.com/en/evaluation-tools/nucleo-l496zg.html) development board
-  - Arm® Cortex®-M4 core with DSP and floating-point unit (FPU) at 80 MHz.
-
-## Project Blink (STM32CubeIDE)
-
-This is a simple blink project created using STM32CubeIDE. User LEDs 2 & 3 are toggled each second, 0.5 seconds out of phase.
-[project_blink/Core/Src/main.c](project_blink/Core/Src/main.c)
-
-## App (vscode)
-
-[app/src/main.c](app/src/main.c)
-
-## Libraries
-
-- [libopencm3](libs/libopencm3/)
-
-## Utilities
-
-- [Development Containerfile](utils/Containerfile.dev.stm32)
+- [stm32l496zg-repo-setup](https://github.com/NathanaelGandhi/stm32l496zg-repo-setup)
